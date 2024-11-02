@@ -42,3 +42,10 @@ class GraphUtils:
                 }
                 graph["links"].append(event)
         return graph
+    
+    @staticmethod
+    def save_graph_size(graph_name, graph, file_path):
+        node_count = len(graph['nodes'])
+        edge_count = len(graph['links'])
+        with open(file_path, 'a') as file:
+            file.write(f"{graph_name} graph - Nodes: {node_count}, Edges: {edge_count}\n")
