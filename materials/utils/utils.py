@@ -29,7 +29,7 @@ class GraphUtils:
         graph["nodes"] = new_nodes
         
     @staticmethod
-    def digraph_to_json(digraph):
+    def from_digraph(digraph):
         graph = {"nodes": [], "links": []}
         for node in digraph.nodes():
             graph["nodes"].append({"id": node})
